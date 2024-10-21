@@ -24,4 +24,3 @@ def save_contact(mysql, form):
     cur.close()
 
     return True
-

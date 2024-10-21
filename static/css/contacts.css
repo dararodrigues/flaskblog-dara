@@ -60,3 +60,8 @@
     pointer-events: all;
     cursor: pointer;
 }
+
+.success {
+    display: table;
+    margin-left: 2rem;    
+}
