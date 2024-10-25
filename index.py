@@ -15,17 +15,18 @@ from datetime import datetime, timedelta
 app = Flask(__name__)
 
 
-# # Detecta o ambiente e carrega as configurações apropriadas
-# if os.getenv('FLASK_ENV') == 'production':
-#     import config_production as config
-# else:
-import config_local as config
+# Detecta o ambiente e carrega as configurações apropriadas
+if os.getenv('FLASK_ENV') == 'production':
+    import config_production as config
+else:
+    import config_local as config
 
 # Dados de conexão
 app.config['MYSQL_HOST'] = config.MYSQL_HOST
 app.config['MYSQL_USER'] = config.MYSQL_USER
 app.config['MYSQL_PASSWORD'] = config.MYSQL_PASSWORD
 app.config['MYSQL_DB'] = config.MYSQL_DB
+app.config['MYSQL_USE_SSL'] = False  
 
 
 # Conecta o Python ao MySQL → `mysql` é a conexão com o banco de dados

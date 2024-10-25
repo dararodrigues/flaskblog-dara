@@ -195,4 +195,3 @@ def get_random(mysql, limit=4): # Obtém artigos aleatórios
     cur.close()
 
     return articles
-
